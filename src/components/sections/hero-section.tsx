@@ -17,8 +17,8 @@ export function HeroSection() {
             priority
             className="size-36 rounded-full border-4 border-white object-cover object-[50%_18%] shadow-xl shadow-slate-300/50 dark:border-slate-800 dark:shadow-black/40 sm:size-44"
           />
-          <p className="mt-7 text-sm font-semibold uppercase tracking-[0.18em] text-teal-700 dark:text-teal-300">
-            React Native Developer
+          <p className="mt-7 text-md font-semibold uppercase tracking-[0.18em] leading-[1.5] text-teal-700 dark:text-teal-300">
+            Front-End Developer <br/> React | React Native
           </p>
           <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.04] text-slate-950 dark:text-white sm:text-6xl lg:text-7xl">
             Mahmoud Saleh

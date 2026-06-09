@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeScript } from "@/components/ui/theme-script";
+import { ThemeInitializer } from "@/components/ui/theme-initializer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <head>
-        <ThemeScript />
+        <ThemeInitializer />
       </head>
       <body className="flex min-h-full flex-col bg-white text-slate-950 dark:bg-slate-950 dark:text-white">
         {children}

@@ -5,33 +5,48 @@ import { Moon, Sun } from "lucide-react";
 
 type Theme = "light" | "dark";
 
-function getPreferredTheme(): Theme {
-  if (typeof window === "undefined") {
-    return "light";
-  }
-
-  const storedTheme = window.localStorage.getItem("theme");
-
-  if (storedTheme === "light" || storedTheme === "dark") {
-    return storedTheme;
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-}
-
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>(() => getPreferredTheme());
+  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") as Theme | null;
+
+    const systemTheme: Theme =
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+    const initialTheme =
+      storedTheme === "dark" || storedTheme === "light"
+        ? storedTheme
+        : systemTheme;
+
+    setTheme(initialTheme);
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
+    localStorage.setItem("theme", theme);
+  }, [theme, mounted]);
 
   function toggleTheme() {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-    window.localStorage.setItem("theme", nextTheme);
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  }
+
+  // Step 3: prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <button
+        type="button"
+        className="inline-flex size-10 items-center justify-center rounded-md border"
+        aria-hidden="true"
+      >
+        <Moon size={18} />
+      </button>
+    );
   }
 
   const isDark = theme === "dark";
