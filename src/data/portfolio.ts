@@ -21,17 +21,27 @@ export const navItems = [
 ];
 
 export const stats = [
-  { label: "Years building apps", value: "5+" },
-  { label: "Orange Money users", value: "1.5M+" },
+  { label: "Years building mobile and web apps", value: "5+" },
+  { label: "App downloads", value: "5M+" },
   { label: "Bundle reduction", value: "25%" },
 ];
 
 export const projects = [
   {
+    title: "Urpay Finance App",
+    category: "Smart digital wallet app",
+    description:
+      "Integrated Samsung Pay SDK into a React Native digital wallet in a regulated banking environment, delivered subscription payment integrations (Netflix, YouTube).",
+    metrics: ["5M+ downloads", "Samsung Pay Native Bridge", "YouTube & Netflix Subscription"],
+    accent: "from-blue-400 to-indigo-500",
+    href: "https://apps.apple.com/ie/app/urpay/id1585778338",
+    cta: "View on App Store",
+  },
+  {
     title: "POS Mobile App",
     category: "React Native POS and digital wallet",
     description:
-      "Worked on a telecom-scale POS app with thermal printer support, KYC flows, ID check native bridge, and Orange Money digital wallet features.",
+      "Worked on a telecom-scale POS app with thermal printer support, KYC BlinkID-SDK flows, ID check native bridge, and Orange Money digital wallet features.",
     metrics: ["50K+ downloads", "Thermal printer", "KYC & ID bridge"],
     accent: "from-emerald-500 to-teal-600",
     href: "https://play.google.com/store/apps/details?id=com.eska.pma&hl=en",
@@ -52,7 +62,7 @@ export const projects = [
     category: "React Native kids games and media",
     description:
       "Built and contributed to React Native mobile kids games and interactive app experiences for Roya TV's children-focused platform.",
-    metrics: ["RN games", "Media app", "Kids platform"],
+    metrics: ["100K+ downloads", "RN games", "Media app", "Kids platform"],
     accent: "from-rose-500 to-orange-500",
     href: "https://play.google.com/store/apps/details?id=com.royakids.tv&hl=en_IE",
     cta: "View on Google Play",

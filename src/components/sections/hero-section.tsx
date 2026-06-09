@@ -102,11 +102,11 @@ export function HeroSection() {
                         Mobile app focus
                       </span>
                       <span className="font-semibold text-slate-950 dark:text-white">
-                        90%
+                        80%
                       </span>
                     </div>
                     <div className="h-3 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
-                      <div className="h-full w-[90%] rounded-full bg-teal-600 dark:bg-teal-400" />
+                      <div className="h-full w-[80%] rounded-full bg-teal-600 dark:bg-teal-400" />
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-3">
