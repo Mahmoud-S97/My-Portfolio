@@ -24,7 +24,7 @@ export function HeroSection() {
             Mahmoud Saleh
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 dark:text-slate-300">
-            React Native engineer in Dublin with 5+ years delivering mobile and
+            React & React Native engineer in Dublin with 5+ years delivering mobile and
             web applications across fintech, telecom, media, and e-commerce.
             I build with React Native, React.js, Next.js, and TypeScript.
           </p>
